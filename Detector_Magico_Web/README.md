@@ -128,15 +128,8 @@ El modelo fue desarrollado utilizando **Transfer Learning** con **MobileNetV2** 
 
 Posteriormente, el modelo fue convertido a TensorFlow.js para permitir su ejecución directamente desde el navegador.
 
-Los archivos del modelo se encuentran en la carpeta:
-
-```text
-modelo_web_FINAL_tfjs_2/
-```
-
 El archivo `model.json` define la estructura del modelo, mientras que los archivos `.bin` contienen los pesos necesarios para realizar las predicciones.
 
----
 
 ## Autores
 
