@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Detector Mágico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo"></div>
+        <h1>El Detector Mágico</h1>
+        <p>Detector inteligente de objetos con Inteligencia Artificial</p>
+    </header>
+
+    <main>
+
+        <section class="status-card">
+            <div id="statusIcon" class="status-icon loading">⏳</div>
+
+            <div>
+                <h2 id="statusTitle">Cargando modelo...</h2>
+                <p id="statusText">
+                    Esperando inicialización del modelo de Inteligencia Artificial.
+                </p>
+            </div>
+        </section>
+
+        <section class="camera-card">
+
+            <div class="video-container">
+
+                <video id="video" autoplay playsinline></video>
+
+                <div class="camera-overlay">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                </div>
+
+                <div id="cameraMessage" class="camera-message">
+                    📷 Presiona "Activar cámara"
+                </div>
+
+            </div>
+
+            <div class="controls">
+
+                <button id="startCamera" class="btn primary">
+                    📷 Activar cámara
+                </button>
+
+                <button id="detectButton" class="btn success" disabled>
+                    🔍 Detectar objeto
+                </button>
+
+                <button id="stopCamera" class="btn danger" disabled>
+                    ⏹ Detener cámara
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="result-card">
+
+            <h2>Resultado de la detección</h2>
+
+            <div id="resultIcon" class="result-icon">
+                ❓
+            </div>
+
+            <div id="resultName" class="result-name">
+                Esperando detección...
+            </div>
+
+            <div class="confidence-container">
+
+                <div class="confidence-label">
+                    <span>Confianza</span>
+                    <span id="confidenceText">0%</span>
+                </div>
+
+                <div class="progress">
+                    <div id="confidenceBar" class="progress-bar"></div>
+                </div>
+
+            </div>
+
+            <p id="resultMessage" class="result-message">
+                Activa la cámara y coloca un objeto frente a ella.
+            </p>
+
+        </section>
+
+        <section class="classes-card">
+
+            <h2>Categorías que reconoce</h2>
+
+            <div class="classes">
+
+                <div class="class-item">
+                    <span>📦</span>
+                    <p>Caja</p>
+                </div>
+
+                <div class="class-item">
+                    <span>📱</span>
+                    <p>Celular</p>
+                </div>
+
+                <div class="class-item">
+                    <span>👓</span>
+                    <p>Lentes</p>
+                </div>
+
+                <div class="class-item">
+                    <span>🍎</span>
+                    <p>Manzana</p>
+                </div>
+
+                <div class="class-item">
+                    <span>🖱️</span>
+                    <p>Mouse</p>
+                </div>
+
+                <div class="class-item">
+                    <span>🍌</span>
+                    <p>Plátano</p>
+                </div>
+
+                <div class="class-item">
+                    <span>⌚</span>
+                    <p>Reloj</p>
+                </div>
+
+                <div class="class-item">
+                    <span>✂️</span>
+                    <p>Tijeras</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
